@@ -18,8 +18,14 @@ const getData = async(subject) =>{
 
     const data = await response.json()
     console.log(data.articles)
+    renderData(data.articles)
+}
 
-
+const renderData = (articles)=>{
+    container.innerHTML = "";
+    for (let item of articles) {
+        const {title ,description, urlToImage,url ,publishedAt} = item
+    }
 }
 
 
